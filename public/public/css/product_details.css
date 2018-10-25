@@ -1,0 +1,62 @@
+.product_img {
+    width: 70%;
+    margin: 25px;
+    border: 3px solid red;
+    border-radius: 30px;
+    float: right;
+}
+.product_img img {
+    padding: 20%;
+}
+.product_title {
+    padding: 25px 0px;
+    line-height: 50px;
+}
+.product_title h3 {
+    font-weight: bold;
+}
+.product_title .product-price {
+    color: red;
+    font-size: 18px;
+
+}
+.btn_product {
+    width: 100%;
+    border-radius: 15px;
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    line-height: 30px;
+}
+.product_detail_ip .ip_border {
+    border: none;
+    background: #fff;
+    font-size: 25px;
+}
+.product_detail_ip input:focus {
+    outline: 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background: #000;
+    border-radius: 20px;
+    color: #fff;
+}
+.info_detail .info_detail_menu {
+    background: #b3b3b3;
+    border-radius: 20px;
+    color: #fff;
+}
+.info_detail .tab-content {
+    margin-top: 20px;
+}
+.info_detail .info_detail_menu a {
+    color: #fff;
+    font-weight: bold;
+}
+.info_detail .info_detail_menu a:hover {
+    background: #b3b3b3;
+    border-radius: 20px;
+}
+.info_detail .nav_info ul {
+    border-bottom: 2px solid #000;
+}

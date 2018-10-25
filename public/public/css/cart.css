@@ -1,0 +1,66 @@
+
+.table-left {
+    border-top: 1px solid #ddd;
+}
+.form-control {
+    font-size: 1.4rem;
+}
+.table-left th {
+    font-size: 15px;
+    border: 1px solid #ddd;
+}
+.cart-title {
+    margin-top: 20px;
+    color: #0B610B;
+    font-weight: bold; 
+}
+.title .number {
+    width: 40px;
+    height: 40px;
+    background: #0B610B;
+    border-radius: 20px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    margin:-10px 10px;;
+    padding: 0;
+    float: left;
+}
+b {
+    margin-left: 10px;
+}
+.title {
+    margin-bottom: 20px;
+}
+.table-left td {
+    border: 1px solid #ddd;    
+}
+.table-right th, td {
+    padding-left: 40px;
+    font-size: 14px;
+}
+.table-right th {
+    font-weight: bold;
+}
+.info {
+    border-left: 3px solid #000; 
+    height: 235px;
+}
+.info .btn {
+    padding: 4px 20px;
+    background-color: red;
+    border-radius: 20px; 
+    font-weight: bold;
+    color: #fff;
+    margin-top: 15px;
+}
+.info .info-btn {
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+.btn-success:active:hover {
+    background: #255625;
+}
+.info-btn .btn-success {
+    background: #1b6e1b;
+}

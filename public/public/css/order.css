@@ -1,0 +1,76 @@
+.content-order {
+    margin-bottom: 15px;
+}
+.table-left td {
+    border: 1px solid #ddd;    
+}
+.table-right th, td {
+    padding-left: 40px;
+    font-size: 13px;
+    padding-top: 10px;
+}
+.table-right th {
+    font-weight: bold;
+}
+.item-color {
+    color: #000;
+    font-weight: bold;
+}
+.info .btn {
+    padding: 5px 20px;
+    background-color: red;
+    border-radius: 20px; 
+    font-weight: bold;
+    color: #fff;margin-top: 10px;
+}
+.info .info-btn {
+    text-align: center;
+}
+.fee-info {
+    color: red;
+    margin-bottom: 5px;
+}
+.total {
+ color: red; 
+ font-weight: bold;
+ border-top: 2px solid #ddd;
+}
+.item-address-info input, select, textarea {
+    width: 100%;
+    line-height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #bfbfbf;
+    padding: 0 10px;
+}
+.item-address-info input:focus, select, textarea:focus {
+    outline: 0;
+}
+.item-address-info tr {
+    border-radius: 20px;
+}
+.item-address-info select {
+    height: 32px;
+}
+.item-confirm {
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: orangered;
+    margin: 5px 10px;
+    padding: 2px 15px;
+    
+}
+.radio-item {
+    margin: 15px;
+    padding: 0px;
+    line-height: 30px;
+}
+.radio-item span {
+    margin-left: 5px;
+    font-size: 14px;
+    color: red; 
+}
+.radio-item input {
+    cursor: pointer;
+}
