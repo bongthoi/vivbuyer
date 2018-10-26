@@ -1,4 +1,4 @@
-import express  from    'express';
+import express from 'express';
 
 /** */
 import ProductService from '../service/productService';
@@ -6,47 +6,66 @@ import CategoryService from '../service/categoryService';
 
 
 /** */
-let router=express.Router();
-let productService=new ProductService();
-let categoryService =new CategoryService();
+let router = express.Router();
+let productService = new ProductService();
+let categoryService = new CategoryService();
 
-router.get('/',async (req,res)=>{
+router.get('/', async (req, res) => {
     try {
-        let products=await productService.getAll();
-        let categories=await categoryService.getAll();       
+        let products = await productService.getAll();
+        let categories = await categoryService.getAll();
 
-        res.render('public/index',{title:"Home",categories:categories,products:products});
+        res.render('public/index', { title: "Home", categories: categories, products: products });
     } catch (error) {
-        res.render('public/errors',{title:'Errors',errors:error,categories:categories});
+        res.render('public/errors', { title: 'Errors', errors: error, categories: categories });
     }
-        
+
 });
 
-router.get('/products/product_detail/:productID',async(req,res)=>{
+router.get('/products/product_detail/:productID', async (req, res) => {
     try {
-        let product=await productService.getDetail(req.params.productID);
-        let categories=await categoryService.getAll();
+        let product = await productService.getDetail(req.params.productID);
+        let categories = await categoryService.getAll();
 
-        res.render('public/product_detail',{title:'Product Detail',categories:categories,product:product});
+        res.render('public/product_detail', { title: 'Product Detail', categories: categories, product: product });
     } catch (error) {
-        res.render('public/errors',{title:'Errors',errors:error,categories:categories});
-    } 
+        res.render('public/errors', { title: 'Errors', errors: error, categories: categories });
+    }
 });
 
-router.get('/products/product_by_category/:categoryID',async (req,res)=>{
+router.get('/products/product_by_category/:categoryID', async (req, res) => {
     let categories;
-    try {        
-        categories=await categoryService.getAll();
-        let products=await productService.getByCategory(req.params.categoryID);
+    try {
+        categories = await categoryService.getAll();
+        let products = await productService.getByCategory(req.params.categoryID);
 
-        res.render('public/product_by_category',{title:"Product By Category",categories:categories,products:products});
+        res.render('public/product_by_category', { title: "Product By Category", categories: categories, products: products });
     } catch (error) {
-        res.render('public/errors',{title:'Errors',errors:error,categories:categories});
+        res.render('public/errors', { title: 'Errors', errors: error, categories: categories });
     }
-        
+
 });
 
+router.get('/users/register', async(req, res) => {
+    let categories;
+    try {
+        categories = await categoryService.getAll();
+        res.render('public/register', { title: 'Register', categories: categories });
+    } catch (error) {
+        res.render('public/errors', { title: 'Errors', errors: error, categories: categories });
+    }
+});
 
+router.get('/users/login',async (req, res) => {
+    let categories;
+    try {
+        categories = await categoryService.getAll();
+        res.render('public/login', { title: 'Login', categories: categories });
+    } catch (error) {
+        res.render('public/errors', { title: 'Errors', errors: error, categories: categories });
+    }
+    
+});
 
 /** */
-module.exports=router;
+module.exports = router;
