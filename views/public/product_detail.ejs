@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title><%=title%></title>
     
     <!-- Favicon -->
     <!-- <link rel="shortcut icon" type="image/png" href="/public/images/favicon.png" /> -->
@@ -20,13 +20,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
-    <link rel="stylesheet"  href="public/css/product_details.css" type="text/css">
-    <link rel="stylesheet"  href="public/css/index.css" type="text/css">
+    <link rel="stylesheet"  href="/public/css/product_details.css" type="text/css">
+    <link rel="stylesheet"  href="/public/css/index.css" type="text/css">
     
 
-    <script src="public/js/main.js" type="text/javascript"></script>
-    <script src="public/js/product_details.js" type="text/javascript"></script>
-
+    <script src="/public/js/main.js" type="text/javascript"></script>
+    <script src="/public/js/product_details.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -40,22 +39,23 @@
     <% include partials/breadcrumb%>
 
     <div class="content_product_details">
+        <%if(product!=''){%>
         <div class="container">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-1"></div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="product_img">
-                            <img src="" alt="" width="100%">
+                            <img src="<%=product.image%>" alt="" width="100%">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="product_title">
-                            <h3>Tên Sản Phẩm</h3>
+                            <h3><%=product.name%></h3>
                             <div class="product-price">
                                     <span>Giá: </span>
-                                    <span class="products-mn">9.000</span>
-                                    <span class="currency_unit">đ</span>
+                                    <span class="products-mn"><%=product.cost_price%></span>
+                                    <span class="currency_unit">(<%=product.unit%>)</span>
                             </div>
                         </div>
                         <div class="row">
@@ -94,7 +94,7 @@
                                     
                                     <div class="tab-content">
                                       <div id="home" class="tab-pane fade in active">
-                                        <p>Thông tin chi tiết sản phẩm</p>
+                                        <p><%=product.description%></p>
                                       </div>
                                       <div id="menu" class="tab-pane fade">
                                         <p>Ứng dụng sản phẩm</p>
@@ -108,6 +108,7 @@
         </div>
         
     </div>
+    <%}%>
     </div>
 
     <!-- footer -->

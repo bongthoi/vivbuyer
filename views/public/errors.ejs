@@ -34,36 +34,8 @@
     <% include partials/slides%>
     <!-- breadcrumb -->    
     <% include partials/breadcrumb%>
-
-    <div class="content-products">
-        <div class="container">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <ul class="products-list row">
-                    <%if(products.length>0){
-                        for(product of products){%>
-                    <li class="col-xs-5 col-sm-5 col-md-2 product_item">
-                        <a href="/products/product_detail/<%=product.id%>">
-                            <img src="<%=product.image%>" alt="" class="image_fixed" >
-                        </a>                      
-                        <h5><%=product.name%></h5>
-                        <div class="products-price">
-                            <span>Giá: </span>
-                            <span class="products-mn"><%=product.cost_price%></span>
-                            <span class="currency_unit">(<%=product.unit%>)</span>                          
-                        </div>
-                        <a href="#">
-                            <p type="text" class="overlay">
-                                <i class="material-icons">add_shopping_cart</i>
-                                <span>Thêm vào giỏ hàng</span>
-                            </p>  
-                        </a>                     
-                    </li>
-                    <%}%>
-                    <%}%>
-                </ul>
-            </div>            
-        </div>
-    </div>
+    <!-- errors -->
+    <% include partials/errors%>
 
     <!-- footer -->
     <% include partials/footer%>
