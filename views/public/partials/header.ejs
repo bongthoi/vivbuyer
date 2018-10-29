@@ -24,8 +24,14 @@
                         </div>
                         <div class="col-xs-3 col-sm-3 col-md-1 group-button-header">
                             <div class="btn-cart" id="cart-block">
-                                <a title="My cart" href="#">Cart</a>
-                                <span class="notify notify-right" id="cart-count">0</span>
+                                <a title="My cart" href="/cart/viewcart">Cart</a>
+                                <span class="notify notify-right" id="cart-count">
+                                    <%if(session.cart.totalItems){%>
+                                        <span><%= session.cart.totalItems %></span>
+                                        <%}else{%>
+                                            <span>0</span>
+                                        <%}%>
+                                </span>
                             </div>
                         </div>
                     </div>

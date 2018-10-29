@@ -19,11 +19,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-
+ 
     <link rel="stylesheet"  href="/public/css/product_details.css" type="text/css">
     <link rel="stylesheet"  href="/public/css/index.css" type="text/css">
     
-
+ 
     <script src="/public/js/main.js" type="text/javascript"></script>
     <script src="/public/js/product_details.js" type="text/javascript"></script>
 </head>
@@ -60,7 +60,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-3">
-                                <button class="btn_product">Add to cart</button>
+                                <a class="btn btn-danger" href="/product_detail/cart/add/<%=product.id%>"><span class="add-to-cart">Add to cart</span></a>
                             </div>
                                 <div class="col-md-3 "> 
                                     <div class="form-action">
@@ -69,7 +69,7 @@
                                                 <table cellpadding="0" cellspacing="0">
                                                 <tbody><tr>
                                                     <td><input id="Down" class="ip_border" type="button" value=" - "></td>
-                                                    <td rowspan="2"><input disabled="" id="input" name="number" style="width: 45px; height: 35px; border: 2px solid #000; border-radius: 20px; text-align: center;" type="text" value="1"></td>
+                                                    <td rowspan="2"><input disabled="" id="number" name="number" style="width: 45px; height: 35px; border: 2px solid #000; border-radius: 20px; text-align: center;" type="text" value="1"></td>
                                                     <td><input id="Up" class="ip_border" style="margin-right:20px;" type="button" value=" + "></td>                                        
                                                     </tr>
                                                 </tbody></table>
