@@ -45,7 +45,8 @@
           <div class="cart page">
             <ul class="list-group">
                 <li class="list-group-item clearfix">
-                    <div class="col-xs-3"><strong>Product Name</strong></div>
+                    <div class="col-xs-1"><strong>STT</strong></div>
+                    <div class="col-xs-2"><strong>Product Name</strong></div>
                     <div class="col-xs-2 text-right"><strong>Unit Price</strong></div>
                     <div class="col-xs-2 text-right"><strong>Quantity</strong></div>
                     <div class="col-xs-3 text-right"><strong>SubTotal</strong></div>
@@ -53,7 +54,10 @@
                   </li>
               <%for(var i=0;i<products.length;i++){%>
                 <li class="list-group-item clearfix">
-                  <div class="col-xs-3">
+                  <div class="col-xs-1">
+                        <strong><%=i+1%></strong><br/>                    
+                  </div>
+                  <div class="col-xs-2">
                     <strong><%=products[i].item.name%></strong><br/>                    
                   </div>
                   <div class="col-xs-2 text-right">
